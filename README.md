@@ -2,6 +2,16 @@
 # myReact_demo
 react入门学习demo
 =======
+从github克隆到本地后使用步骤说明:
+1、克隆到本地文件夹：
+   git clone https://github.com/itljj/myReact_demo.git
+2、进入myReact_demo文件夹：
+   cd myReact_demo/
+3、下载所需依赖包：
+   npm install (网速不好可以使用此命令：cnpm install)
+4、运行项目
+   npm start
+=======
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
