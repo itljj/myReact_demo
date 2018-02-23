@@ -19,11 +19,10 @@ export default class Comment extends React.Component{
             justifyContent:"flex-end"
         };
         return(
-            <div>
+            <div id="root">
                 <div style={myStyle1}>
-                    <i style={{color:"#992222",fontWeight:"700"}}>{this.props.name}</i>：<br/>“
+                    <i style={{color:"#992222",fontWeight:"700"}} className="aa">{this.props.name}</i>：<br/>“
                     {this.props.children}”
-                    {console.log(this.props.children)}
                     <i style={myStyle2}><Badge status="processing" text={this.props.time} /></i>
                 </div>
                 <Divider style={myStyle} />

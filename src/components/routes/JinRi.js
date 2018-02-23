@@ -1,6 +1,7 @@
 import { List, Avatar, Button, Spin } from 'antd';
-import React from "react";
 import reqwest from 'reqwest';
+import React from "react";
+
 
 const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
 

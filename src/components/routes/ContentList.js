@@ -1,6 +1,6 @@
 import React from "react";
 import Comment from "./Comment";
-export default class CommentList extends React.Component{
+export default class ContentList extends React.Component{
     render(){
         var myStyle = {
             borderWidth:1,

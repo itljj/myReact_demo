@@ -13,15 +13,25 @@ export default class Bbs extends React.Component {
     constructor(props){　/*添加构造函数*/
         super(props);
         this.state={data:myDate};
-        /*组件初始状态，值:对象;添加data状态;
-        传递:数组->子组件*/
-        /*this.getComments();*/
     }
-    /*得到新的数据，重新设置组件的状态，如果状态发生变化，react会重新显示这个组件*/
+    componentWillMount() {
+        let data = JSON.parse(sessionStorage.getItem('key'));
+        if (JSON.parse(sessionStorage.getItem('key'))===null){
+            // this.state={data:myDate};
+            this.setState({data:myDate});
+        }else {
+            // this.state={data:data};
+            this.setState({data:data});
+        }
+    }
+
+/*得到新的数据，重新设置组件的状态，如果状态发生变化，react会重新显示这个组件*/
     handleCommentSubmit = (comment) => {
         let comments= this.state.data,
             newComments= comments.concat(comment);//older+new
+        sessionStorage.setItem("key",JSON.stringify(newComments));
         this.setState({data:newComments});  //重新设置组件状态
+
     }
     /*handleCommentSubmit(comment){
         let comments= this.state.data,
