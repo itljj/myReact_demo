@@ -20,6 +20,11 @@ export default class JinRi extends React.Component {
             });
         });
     }
+    componentWillUnmount(){
+        this.setState = ()=>{
+            return;
+        };
+    }
     getData = (callback) => {
         reqwest({
             url: fakeDataUrl,

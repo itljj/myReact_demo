@@ -15,23 +15,19 @@ export default class Bbs extends React.Component {
         this.state={data:myDate};
     }
     componentWillMount() {
-        let data = JSON.parse(sessionStorage.getItem('key'));
-        if (JSON.parse(sessionStorage.getItem('key'))===null){
-            // this.state={data:myDate};
+        let data = JSON.parse(localStorage.getItem('key'));
+        if (JSON.parse(localStorage.getItem('key'))===null){
             this.setState({data:myDate});
         }else {
-            // this.state={data:data};
             this.setState({data:data});
         }
     }
-
 /*得到新的数据，重新设置组件的状态，如果状态发生变化，react会重新显示这个组件*/
     handleCommentSubmit = (comment) => {
         let comments= this.state.data,
             newComments= comments.concat(comment);//older+new
-        sessionStorage.setItem("key",JSON.stringify(newComments));
+        localStorage.setItem("key",JSON.stringify(newComments));
         this.setState({data:newComments});  //重新设置组件状态
-
     }
     /*handleCommentSubmit(comment){
         let comments= this.state.data,

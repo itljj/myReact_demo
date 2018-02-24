@@ -44,3 +44,11 @@ ol, ul {
 .game-info {
     margin-left: 20px;
 }
+.buttonStyle{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+}
+.buttonStyle:hover{
+    color: #108ee9;
+}

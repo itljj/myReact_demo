@@ -45,7 +45,7 @@ export default class Game extends React.Component {
                 'Game start';
             return (
                 <li key={move}>
-                    <a href="#" onClick={() => this.jumpTo(move)}>{desc}</a>
+                    <button className="buttonStyle" onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
             );
         });
